@@ -3,253 +3,265 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Hussein Fawaz - Full-stack web developer with 5 years industry, freelance, and personal learning experience">
+  <meta name="description" content="Hussein Fawaz is an aspiring software developer with 3 years of professional experience, specializing in the JavaScript ecosystem to build exceptional web applications.">
   <title>Hussein Fawaz</title>
   <link href="./output.css" rel="stylesheet">
 </head>
-<body class="font-montserrat-regular">
-  <div class="w-full h-screen flex justify-center items-center relative">
-    <div class="mx-[52px]">
-      <img src="./images/signature.png" />
+<body class="font-montserrat font-normal flex flex-col gap-16">
+
+  <!-- TODO: add read more button for each item which opens up a modal and shows more info/pics -->
+  <!-- TODO: fade in animations as we scroll down into each section (intersection observer)-->
+  <!-- TODO: provide a test account for users to try the app with -->
+
+  <nav class="fixed top-0 left-0 z-50">
+    <div class="relative top-0 left-0">
+      <a class="block fixed top-4 left-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#">home</a>
+      <a class="block fixed top-4 right-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#about">about</a>
+      <a class="block fixed bottom-4 left-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#experience">experience</a>
+      <a class="block fixed bottom-4 right-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#contact">contact</a>
     </div>
-    <a class="z-50 p_vertical-text border-r border-b border-transparent hover:border-black hover:duration-200 text-sm uppercase p-4 fixed top-0 left-0 rounded-br-lg" href="#about">About</a>
-    <a class="z-50 p_vertical-text border-l border-b border-transparent hover:border-black hover:duration-200 text-sm uppercase p-4 fixed top-0 right-0 rounded-bl-lg" href="#experience">Experience</a>
-    <a class="z-50 p_vertical-text border-r border-t border-transparent hover:border-black hover:duration-200 text-sm uppercase p-4 fixed bottom-0 left-0 rounded-tr-lg" href="#projects">Projects</a>
-    <a class="z-50 p_vertical-text border-l border-t border-transparent hover:border-black hover:duration-200 text-sm uppercase p-4 fixed bottom-0 right-0 rounded-tl-lg" href="#contact">Contact</a>
-  </div>
-  <div class="mx-[52px]">
-    <div id="about" class="w-full min-h-screen flex flex-col relative">
-      <div class="flex items-center gap-4 w-full sticky top-0 bg-white py-2 my-6">
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-        <h1 class="font-montserrat-bold uppercase text-2xl z-50">About</h1>
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-      </div>
-      <div class="flex flex-col gap-8 items-center">
-        <img src="./images/headshot.png" class="w-[400px] rounded-full bg-neutral-100" />
-        <div class="flex flex-col gap-4">
-          <h2 class="text-2xl font-montserrat-bold text-center">Hey! My name is <span class="text-emerald-500">Hussein Fawaz</span></h2>
-          <p class="text-center max-w-[600px]">I am a full stack web developer with 3 years of work experience building a SaaS product in the commercial transportation industry and 2 years of freelancing experience building websites for local businesses.</p>
-          <p class="text-center max-w-[600px]">I am seeking a full-time position in the tech industry as a full stack or frontend developer.</p>
-          <p class="text-center max-w-[600px]">Check out my work below!</p>
-          <a class="self-center border rounded-lg border-black px-4 py-2" href="./files/Resume.pdf" target="_blank">Resume <?xml version="1.0" encoding="UTF-8"?><svg class="inline" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-          </a>
-        </div>
-      </div>
+  </nav>
+
+  <section class="w-full h-screen flex flex-col gap-16 justify-center items-center relative top-0 left-0 overflow-hidden">
+    <a class="block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group max-w-[400px]" href="https://www.linkedin.com/in/hsnfwz/" target="_blank">
+      <img src="./images/headshot.png" class="w-full bg-white/50 backdrop-blur-lg shadow" />
+      <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+      <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+      <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+      <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+    </a>
+    <div class="flex flex-col gap-8 md:gap-16 justify-center items-center">
+      <h1 class="text-7xl md:text-9xl uppercase text-emerald-500">Fawaz</h1>
+      <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
+      <h1 class="text-7xl md:text-9xl uppercase text-emerald-500">Fawaz</h1>
+      <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
+      <h1 class="text-7xl md:text-9xl uppercase text-emerald-500">Fawaz</h1>
+      <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
     </div>
-    <div id="experience" class="w-full min-h-screen flex flex-col relative">
-      <div class="flex items-center gap-4 w-full sticky top-0 bg-white py-2 my-6">
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-        <h1 class="font-montserrat-bold uppercase text-2xl z-50">Experience</h1>
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
+  </section>
+
+  <section id="about" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
+    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">About</h1>
+    <div class="flex flex-col gap-16 max-w-screen-md mx-auto">
+      <div class="flex flex-col gap-8 text-center">
+        <h2 class="text-2xl uppercase"><span class="font-bold text-emerald-500">3 Years</span> Professional Experience</h2>
+        <p>I worked at Switchboard - a Vancouver-based startup - and helped develop their software-as-a-service (SaaS), which empowers companies in the commercial transportation industry across North America to manage their fleets while staying compliant with government regulations
+        </p>
       </div>
-      <div class="flex flex-col gap-8">
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">Switchboard</h2>
-            <p>Web Software Developer</p>
-            <p>Built and improved Switchboard's SaaS to help clients in the commercial transportation industry manage their fleets</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>SASS</p>
-              <p>MDBReact</p>
-              <p>PrimeReact</p>
-              <p>JavaScript</p>
-              <p>React</p>
-              <p>Node</p>
-              <p>Express</p>
-              <p>MJML</p>
-              <p>Parse Platform</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://www.onswitchboard.com/" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/switchboard-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">Mark's Barbershop</h2>
-            <p>Freelance Web Developer</p>
-            <p>Landing page built for Mark's Barbershop to communicate hair styling services, showcase gallery of various haircuts, and provide a booking option for customers</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Tailwind CSS</p>
-              <p>Vercel</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://www.marksbarbershop.ca" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-              <a class="self-start" href="https://github.com/hsnfwz/marks-barbershop" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/marks-barbershop-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">Noureddine Feathers</h2>
-            <p>Freelance Web Developer</p>
-            <p>E-commerce website built for Noureddine Feathers to promote and sell ostrich feathers, feather dusters, lambswool dusters, and eggshells</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Tailwind CSS</p>
-              <p>JavaScript</p>
-              <p>TypeScript</p>
-              <p>Svelte</p>
-              <p>Sveltekit</p>
-              <p>Supabase</p>
-              <p>Vercel</p>
-              <p>Stripe API</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://www.noureddinefeathers.com" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-              <a class="self-start" href="https://github.com/hsnfwz/noureddine-feathers" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/noureddine-feathers-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
+      <div class="flex flex-col gap-8 text-center">
+        <h2 class="text-2xl uppercase"><span class="font-bold text-sky-500">Full-Stack</span> Web Developer</h2>
+        <p>I have a sound understanding of UI/UX design as well as both front-end and back-end software development, always learning to improve my knowledge and skills through work, freelancing, and personal projects</p>
+        <p class="flex flex-wrap gap-1 justify-center">
+          <span class="bg-sky-500 text-white p-2">Figma</span>
+          <span class="bg-sky-500 text-white p-2">Webflow</span>
+          <span class="bg-sky-500 text-white p-2">HTML</span>
+          <span class="bg-sky-500 text-white p-2">CSS</span>
+          <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+          <span class="bg-sky-500 text-white p-2">JavaScript</span>
+          <span class="bg-sky-500 text-white p-2">TypeScript</span>
+          <span class="bg-sky-500 text-white p-2">React</span>
+          <span class="bg-sky-500 text-white p-2">Next.js</span>
+          <span class="bg-emerald-500 text-white p-2">Node.js</span>
+          <span class="bg-emerald-500 text-white p-2">Express.js</span>
+          <span class="bg-emerald-500 text-white p-2">Python</span>
+          <span class="bg-emerald-500 text-white p-2">C#</span>
+          <span class="bg-emerald-500 text-white p-2">SQL</span>
+          <span class="bg-emerald-500 text-white p-2">PostgreSQL</span>
+          <span class="bg-emerald-500 text-white p-2">Supabase</span>
+          <span class="bg-emerald-500 text-white p-2">Neon</span>
+          <span class="bg-emerald-500 text-white p-2">MongoDB</span>
+        </p>
+      </div>
+      <div class="flex flex-col gap-8 text-center">
+        <h2 class="text-2xl uppercase"><span class="font-bold text-emerald-500">Outgoing</span> Personality</h2>
+        <p>I love to spend my free time volunteering with my community, watching hockey and cheering on the Vancouver Canucks, playing volleyball and paddleboarding with my friends in the summers, weight lifting at my local gym, keeping up with blockbuster movies and binge-worthy shows, and reading about technology, business, and politics</p>
       </div>
     </div>
-    <div id="projects" class="w-full min-h-screen flex flex-col relative">
-      <div class="flex items-center gap-4 w-full sticky top-0 bg-white py-2 my-6">
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-        <h1 class="font-montserrat-bold uppercase text-2xl z-50">Projects</h1>
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-      </div>
-      <div class="flex flex-col gap-8">
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">CellyStats</h2>
-            <p>Project #1</p>
-            <p>Website to search any NHL player and display their statistics using tables and charts</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Tailwind CSS</p>
-              <p>JavaScript</p>
-              <p>React</p>
-              <p>Next</p>
-              <p>Tremor</p>
-              <p>NHL API</p>
-              <p>Vercel</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://cellystats.vercel.app/" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-              <a class="self-start" href="https://github.com/hsnfwz/celly-stats-new" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/celly-stats-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">Pod</h2>
-            <p>Project #2</p>
-            <p>Social media application to explore, discuss, and share anything happening around the world with a gamified system</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Tailwind CSS</p>
-              <p>JavaScript</p>
-              <p>TypeScript</p>
-              <p>Svelte</p>
-              <p>Sveltekit</p>
-              <p>Supabase</p>
-              <p>Vercel</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://pod-v1.vercel.app" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-              <a class="self-start" href="https://github.com/hsnfwz/pod" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/pod-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
-        <div class="flex flex-col lg:flex-row gap-4 w-full">
-          <div class="flex flex-col gap-4 lg:w-2/5 border border-black rounded-lg p-4 items-center justify-center text-center">
-            <h2 class="text-2xl font-montserrat-bold">Piggy Bank</h2>
-            <p>Project #3</p>
-            <p>Budget application to help users track and calculate their income and expenses and collaborate with community members and assistants to save money</p>
-            <div class="flex flex-wrap justify-center gap-2 text-emerald-500 text-sm">
-              <p>HTML</p>
-              <p>CSS</p>
-              <p>Bootstrap</p>
-              <p>JavaScript</p>
-              <p>React</p>
-              <p>Node</p>
-              <p>Express</p>
-              <p>PostgreSQL</p>
-              <p>Render</p>
-            </div>
-            <div class="flex gap-4">
-              <a class="self-start" href="https://piggy-bank-client.onrender.com/" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg>
-              </a>
-              <a class="self-start" href="https://github.com/hsnfwz/piggy-bank" target="_blank">
-                <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-              </a>
-            </div>
-          </div>
-          <div class="lg:w-3/5">
-            <img src="./images/piggy-bank-preview.png" class="w-full rounded-lg object-cover h-full" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="contact" class="w-full min-h-screen flex flex-col relative">
-      <div class="flex items-center gap-4 w-full sticky top-0 bg-white py-2 my-6">
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-        <h1 class="font-montserrat-bold uppercase text-2xl z-50">Contact</h1>
-        <div class="w-full h-[1px] bg-black rounded-full"></div>
-      </div>
-      <div class="flex flex-col gap-4 items-center justify-center">
-        <h2 class="text-center">hsnfwz99@gmail.com</h2>
-        <h2 class="text-center">778.960.8712</h2>
-        <div class="flex gap-4">
-          <a class="" href="https://www.linkedin.com/in/hsnfwz/" target="_blank">
-            <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-          <a class="" href="https://github.com/hsnfwz" target="_blank">
-            <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.3333 19V17.137C14.3583 16.8275 14.3154 16.5163 14.2073 16.2242C14.0993 15.9321 13.9286 15.6657 13.7067 15.4428C15.8 15.2156 18 14.4431 18 10.8989C17.9998 9.99256 17.6418 9.12101 17 8.46461C17.3039 7.67171 17.2824 6.79528 16.94 6.01739C16.94 6.01739 16.1533 5.7902 14.3333 6.97811C12.8053 6.57488 11.1947 6.57488 9.66666 6.97811C7.84666 5.7902 7.05999 6.01739 7.05999 6.01739C6.71757 6.79528 6.69609 7.67171 6.99999 8.46461C6.35341 9.12588 5.99501 10.0053 5.99999 10.9183C5.99999 14.4366 8.19999 15.2091 10.2933 15.4622C10.074 15.6829 9.90483 15.9461 9.79686 16.2347C9.68889 16.5232 9.64453 16.8306 9.66666 17.137V19" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9.66667 17.7018C7.66667 18.3335 6 17.7018 5 15.7544" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          </a>
-        </div>
-        <a class="self-center border rounded-lg border-black px-4 py-2" href="./files/Resume.pdf" target="_blank">Resume <?xml version="1.0" encoding="UTF-8"?><svg class="inline" width="24px" height="24px" viewBox="0 0 24 24" stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 3L15 3M21 3L12 12M21 3V9" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M21 13V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3 3.89543 3.89543 3 5 3H11" stroke="#000000" stroke-width="1.5" stroke-linecap="round"></path></svg></a>
-        <img src="./images/background.jpg" class="w-[400px] rounded-lg" />
-      </div>
-    </div>
-    <footer class="flex flex-col gap-4 items-center justify-center py-2 my-6">
-      <p class="text-sm text-center">Designed and developed by Hussein Fawaz</p>
-      <a href="https://github.com/hsnfwz/portfolio" target="_blank">
-        <?xml version="1.0" encoding="UTF-8"?><svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 8.99999 3.50679C6.26999 1.67679 5.08999 2.02679 5.08999 2.02679C4.57636 3.22514 4.54413 4.5753 4.99999 5.79679C4.03011 6.81549 3.49251 8.17026 3.49999 9.57679C3.49999 14.9968 6.79998 16.1868 9.93998 16.5768C9.61098 16.9168 9.35725 17.3222 9.19529 17.7667C9.03334 18.2112 8.96679 18.6849 8.99999 19.1568V22.0268" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 20.0267C6 20.9999 3.5 20.0267 2 17.0267" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+  </section>
+
+  <section id="experience" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
+    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">Experience</h1>
+    <h2 class="text-2xl text-center uppercase">Professional</h2>
+    <div class="flex flex-col gap-16">
+      <a class="self-start block relative top-0 left-0 group w-[calc(100%-16px)] max-w-[calc(768px-16px)] mx-auto" href="https://www.onswitchboard.com/" target="_blank">
+        <img src="./images/switchboard.png" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+        <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+        <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+        <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+        <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
       </a>
-    </footer>
-  </div>
+      <div class="flex flex-col gap-4 max-w-screen-md mx-auto">
+        <p class="text-neutral-400">January 2021 - December 2023</p>
+        <p class="text-neutral-400">Vancouver, BC</p>
+        <p>Communicated and collaborated with the Web, Mobile, QA, and Support teams</p>
+        <p>Researched, designed, and implemented user interfaces/experiences using Figma and React, improving visual appearances, user interactions, and workflows</p>
+        <p>Developed and improved API functionalities across microservices using JavaScript, Node.js, Express.js, and Parse Platform, speeding up execution times and delivering accurate data</p>
+        <p>Managed projects using Jira, Bitbucket, and Confluence to organize, document, and complete tasks within sprint intervals, increasing team efficiency and release of features and bug fixes</p>
+        <p>Integrated GitHub Copilot and utilized ChatGPT to implement common solutions and speed up development time</p>
+      </div>
+    </div>
+    <h2 class="text-2xl text-center uppercase">Projects</h2>
+    <div class="grid grid-flow-col gap-16 py-4 px-2 w-full overflow-x-scroll overflow-y-hidden overscroll-x-contain snap-mandatory snap-x scroll-px-4">
+      <div class="flex flex-col gap-16">
+        <a class="block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://cellystats.vercel.app/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/cellystats.png">
+            <img src="./images/cellystats-mobile.png" alt="cellystats" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <a class="w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/cellystats" target="_blank">Code</a>
+        <div class="flex flex-col gap-8">
+          <h1 class="text-2xl">CellyStats</h1>
+          <p>Search, view, and compare National Hockey League (NHL) player statistics with visual breakdowns</p>
+          <!-- <button id="experience-1-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
+          <p class="flex flex-wrap gap-1">
+            <span class="bg-sky-500 text-white p-2">HTML</span>
+            <span class="bg-sky-500 text-white p-2">CSS</span>
+            <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+            <span class="bg-sky-500 text-white p-2">JavaScript</span>
+            <span class="bg-sky-500 text-white p-2">React</span>
+            <span class="bg-sky-500 text-white p-2">Next.js</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <a class="block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://piggysave.onrender.com/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/piggysave.png">
+            <img src="./images/piggysave-mobile.png" alt="piggysave" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <div class="flex flex-col md:flex-row gap-4">
+          <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/piggysave-client" target="_blank">Client Code</a>
+          <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/piggysave-server" target="_blank">Server Code</a>
+        </div>
+        <div class="flex flex-col gap-8">
+          <h1 class="text-2xl">PiggySave</h1>
+          <p>Track and calculate your income and expenses and view trends with visual breakdowns</p>
+          <!-- <button id="experience-2-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
+          <p class="flex flex-wrap gap-1">
+            <span class="bg-sky-500 text-white p-2">HTML</span>
+            <span class="bg-sky-500 text-white p-2">CSS</span>
+            <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+            <span class="bg-sky-500 text-white p-2">JavaScript</span>
+            <span class="bg-sky-500 text-white p-2">TypeScript</span>
+            <span class="bg-sky-500 text-white p-2">React</span>
+            <span class="bg-emerald-500 text-white p-2">Node.js</span>
+            <span class="bg-emerald-500 text-white p-2">Express.js</span>
+            <span class="bg-emerald-500 text-white p-2">SQL</span>
+            <span class="bg-emerald-500 text-white p-2">PostgreSQL</span>
+            <span class="bg-emerald-500 text-white p-2">Neon</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <a class="block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://www.husseinfawaz.ca/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/hussein-fawaz-portfolio.png">
+            <img src="./images/hussein-fawaz-portfolio-mobile.png" alt="piggysave" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/portfolio" target="_blank">Code</a>
+        <div class="flex flex-col gap-8">
+          <h1 class="text-2xl">Hussein Fawaz Portfolio</h1>
+          <p>Official website of Hussein Fawaz showcasing his web development experience</p>
+          <!-- <button id="experience-3-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
+          <p class="flex flex-wrap gap-1">
+            <span class="bg-sky-500 text-white p-2">HTML</span>
+            <span class="bg-sky-500 text-white p-2">CSS</span>
+            <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+            <span class="bg-sky-500 text-white p-2">JavaScript</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <a class="block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://www.zeinabfawaz.ca/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/zeinab-fawaz-portfolio.png">
+            <img src="./images/zeinab-fawaz-portfolio-mobile.png" alt="piggysave" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/zeinab-fawaz-portfolio" target="_blank">Code</a>
+        <div class="flex flex-col gap-8">
+          <h1 class="text-2xl">Zeinab Fawaz Porfolio</h1>
+          <p>Official website of Zeinab Fawaz showcasing her social media and content creation experience</p>
+          <!-- <button id="experience-4-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
+          <p class="flex flex-wrap gap-1">
+            <span class="bg-sky-500 text-white p-2">HTML</span>
+            <span class="bg-sky-500 text-white p-2">CSS</span>
+            <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+            <span class="bg-sky-500 text-white p-2">JavaScript</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-16">
+        <a class="block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://project-313.vercel.app/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/project313.png">
+            <img src="./images/project313-mobile.png" alt="piggysave" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/project-313" target="_blank">Code</a>
+        <div class="flex flex-col gap-8">
+          <h1 class="text-2xl">Project313</h1>
+          <p>Socialize and share images, videos, and discussions with online community members</p>
+          <!-- <button id="experience-2-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
+          <p class="flex flex-wrap gap-1">
+            <span class="bg-sky-500 text-white p-2">HTML</span>
+            <span class="bg-sky-500 text-white p-2">CSS</span>
+            <span class="bg-sky-500 text-white p-2">Tailwind CSS</span>
+            <span class="bg-sky-500 text-white p-2">JavaScript</span>
+            <span class="bg-sky-500 text-white p-2">React</span>
+            <span class="bg-emerald-500 text-white p-2">Supabase</span>
+          </p>
+          <span class="self-start p-2 bg-rose-500 text-white">Work in Progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px] h-screen">
+    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">Contact</h1>
+    <div class="mx-auto flex flex-col gap-8 py-4 px-2 w-full max-w-screen-md">
+      <div class="flex flex-col gap-8 text-center">
+        <h2 class="text-2xl uppercase">Let's Connect!</h2>
+        <p>I am seeking a full-time/part-time position as a software developer in North America and would love the opportunity to meet and discuss more about my qualifications and how I can help your team and business</p>
+      </div>
+      <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="mailto: hsnfwz99@gmail.com">Email</a>
+      <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://www.linkedin.com/in/hsnfwz/" target="_blank">LinkedIn</a>
+      <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz" target="_blank">GitHub</a>
+      <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://docs.google.com/document/d/1mSE5ze5_DX32lnXj1PkR6NM3aipGZoBAb5aLEFiAiOc/export?format=pdf">Resume</a>
+    </div>
+  </section>
+
+  <footer class="flex flex-col gap-4 items-center justify-center px-[70px] py-2">
+    <h1 class="text-xs text-center">2025 - Hussein Fawaz</h1>
+  </footer>
+
+  <script src="./index.js" defer></script>
 </body>
 </html>
