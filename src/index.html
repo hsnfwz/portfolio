@@ -13,12 +13,24 @@
   <!-- TODO: fade in animations as we scroll down into each section (intersection observer)-->
   <!-- TODO: provide a test account for users to try the app with and note users about cold starts-->
 
-  <nav class="fixed top-0 left-0 z-40">
-    <div class="relative top-0 left-0">
-      <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block fixed top-4 left-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#">home</a>
-      <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block fixed top-4 right-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#about">about</a>
-      <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block fixed bottom-4 left-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#experience">experience</a>
-      <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block fixed bottom-4 right-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#contact">contact</a>
+  <nav class="fixed bottom-4 md:top-4 right-4 z-40">
+    <button id="nav-button" type="button" class="transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg>
+    </button>
+    <div id="nav-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+      <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+        <button id="nav-modal-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+        </button>
+        <div class="flex flex-col gap-4 bg-white px-4 pb-4 md:px-[56px] md:pb-[56px] w-full">
+          <div class="flex flex-col gap-4">
+            <a id="nav-modal-link-home" class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow uppercase p-2 duration-300 transition-all" href="#">home</a>
+            <a id="nav-modal-link-about" class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow uppercase p-2 duration-300 transition-all" href="#about">about</a>
+            <a id="nav-modal-link-experience" class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow uppercase p-2 duration-300 transition-all" href="#experience">experience</a>
+            <a id="nav-modal-link-contact" class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow uppercase p-2 duration-300 transition-all" href="#contact">contact</a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -35,13 +47,11 @@
       <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
       <h1 class="text-7xl md:text-9xl uppercase text-emerald-500">Fawaz</h1>
       <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
-      <h1 class="text-7xl md:text-9xl uppercase text-emerald-500">Fawaz</h1>
-      <h1 class="text-7xl md:text-9xl uppercase text-sky-500">Hussein</h1>
     </div>
   </section>
 
-  <section id="about" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
-    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">About</h1>
+  <section id="about" class="w-full flex flex-col gap-16 relative top-0 left-0 px-4">
+    <h1 class="w-full text-center p-2 z-30 sticky top-0 bg-white border-b border-neutral-200 uppercase">About</h1>
     <div class="flex flex-col gap-16 max-w-screen-md mx-auto">
       <div class="flex flex-col gap-4 text-center">
         <h2 class="text-2xl uppercase"><span class="font-bold text-emerald-500">3 Years</span> Professional Experience</h2>
@@ -79,8 +89,8 @@
     </div>
   </section>
 
-  <section id="experience" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
-    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">Experience</h1>
+  <section id="experience" class="w-full flex flex-col gap-16 relative top-0 left-0 px-4">
+    <h1 class="w-full text-center p-2 z-30 sticky top-0 bg-white border-b border-neutral-200 uppercase">Experience</h1>
     <h2 class="text-2xl text-center uppercase">Professional</h2>
     <div class="flex flex-col gap-16">
       <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 self-start block relative top-0 left-0 group w-[calc(100%-16px)] max-w-[calc(768px-16px)] mx-auto" href="https://www.onswitchboard.com/" target="_blank">
@@ -344,8 +354,8 @@
     </div>
   </section>
 
-  <section id="contact" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px] h-screen">
-    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">Contact</h1>
+  <section id="contact" class="w-full flex flex-col gap-16 relative top-0 left-0 px-4 h-screen">
+    <h1 class="w-full text-center p-2 z-30 sticky top-0 bg-white border-b border-neutral-200 uppercase">Contact</h1>
     <div class="mx-auto flex flex-col gap-8 py-4 px-2 w-full max-w-screen-md">
       <div class="flex flex-col gap-8 text-center">
         <h2 class="text-2xl uppercase">Let's Connect!</h2>
@@ -358,7 +368,7 @@
     </div>
   </section>
 
-  <footer class="flex flex-col gap-4 items-center justify-center px-[70px] py-2">
+  <footer class="flex flex-col gap-4 items-center justify-center px-4 py-2">
     <h1 class="text-xs text-center">2025 - Hussein Fawaz</h1>
   </footer>
 

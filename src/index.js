@@ -1,34 +1,50 @@
 const body = document.querySelector('body');
 
-const bcTransitDetailsDetailsId = 'bc-transit-details';
+const navButton = document.querySelector('#nav-button');
+const navCloseButton = document.querySelector('#nav-modal-close-button');
+
+navButton.addEventListener('click', () => showModal(`#nav-modal`));
+navCloseButton.addEventListener('click', () => hideModal(`#nav-modal`));
+
+const navModalLinkHome = document.querySelector('#nav-modal-link-home');
+const navModalLinkAbout = document.querySelector('#nav-modal-link-about');
+const navModalLinkExperience = document.querySelector('#nav-modal-link-experience');
+const navModalLinkContact = document.querySelector('#nav-modal-link-contact');
+
+navModalLinkHome.addEventListener('click', () => hideModal(`#nav-modal`));
+navModalLinkAbout.addEventListener('click', () => hideModal(`#nav-modal`));
+navModalLinkExperience.addEventListener('click', () => hideModal(`#nav-modal`));
+navModalLinkContact.addEventListener('click', () => hideModal(`#nav-modal`));
+
+const bcTransitDetailsId = 'bc-transit-details';
 const cellyStatsDetailsId = 'cellystats-details';
 const piggySaveDetailsId = 'piggysave-details';
 const project313DetailsId = 'project313-details';
 const husseinFawazPortfolioDetailsId = 'hussein-fawaz-portfolio-details';
 const zeinabFawazPortfolioDetailsId = 'zeinab-fawaz-portfolio-details';
 
-const bcTransitDetailsButton = document.querySelector(`#${bcTransitDetailsDetailsId}-button`);
+const bcTransitDetailsButton = document.querySelector(`#${bcTransitDetailsId}-button`);
 const cellyStatsDetailsButton = document.querySelector(`#${cellyStatsDetailsId}-button`);
 const piggySaveDetailsButton = document.querySelector(`#${piggySaveDetailsId}-button`);
 const project313DetailsButton = document.querySelector(`#${project313DetailsId}-button`);
 const husseinFawazPortfolioDetailsButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-button`);
 const zeinabFawazPortfolioDetailsButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-button`);
 
-const bcTransitDetailsCloseButton = document.querySelector(`#${bcTransitDetailsDetailsId}-close-button`);
-const cellyStatsDetailsCloseButton = document.querySelector(`#${cellyStatsDetailsId}-close-button`);
-const piggySaveDetailsCloseButton = document.querySelector(`#${piggySaveDetailsId}-close-button`);
-const project313DetailsCloseButton = document.querySelector(`#${project313DetailsId}-close-button`);
-const husseinFawazPortfolioDetailsCloseButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-close-button`);
-const zeinabFawazPortfolioDetailsCloseButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-close-button`);
-
-bcTransitDetailsButton.addEventListener('click', () => showModal(`#${bcTransitDetailsDetailsId}-modal`));
+bcTransitDetailsButton.addEventListener('click', () => showModal(`#${bcTransitDetailsId}-modal`));
 cellyStatsDetailsButton.addEventListener('click', () => showModal(`#${cellyStatsDetailsId}-modal`));
 piggySaveDetailsButton.addEventListener('click', () => showModal(`#${piggySaveDetailsId}-modal`));
 project313DetailsButton.addEventListener('click', () => showModal(`#${project313DetailsId}-modal`));
 husseinFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${husseinFawazPortfolioDetailsId}-modal`));
 zeinabFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${zeinabFawazPortfolioDetailsId}-modal`));
 
-bcTransitDetailsCloseButton.addEventListener('click', () => hideModal(`#${bcTransitDetailsDetailsId}-modal`));
+const bcTransitDetailsCloseButton = document.querySelector(`#${bcTransitDetailsId}-close-button`);
+const cellyStatsDetailsCloseButton = document.querySelector(`#${cellyStatsDetailsId}-close-button`);
+const piggySaveDetailsCloseButton = document.querySelector(`#${piggySaveDetailsId}-close-button`);
+const project313DetailsCloseButton = document.querySelector(`#${project313DetailsId}-close-button`);
+const husseinFawazPortfolioDetailsCloseButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-close-button`);
+const zeinabFawazPortfolioDetailsCloseButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-close-button`);
+
+bcTransitDetailsCloseButton.addEventListener('click', () => hideModal(`#${bcTransitDetailsId}-modal`));
 cellyStatsDetailsCloseButton.addEventListener('click', () => hideModal(`#${cellyStatsDetailsId}-modal`));
 piggySaveDetailsCloseButton.addEventListener('click', () => hideModal(`#${piggySaveDetailsId}-modal`));
 project313DetailsCloseButton.addEventListener('click', () => hideModal(`#${project313DetailsId}-modal`));
@@ -66,7 +82,8 @@ function hideModal(selector) {
 
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
-    hideModal(`#${bcTransitDetailsDetailsId}-modal`);
+    hideModal(`#nav-modal`);
+    hideModal(`#${bcTransitDetailsId}-modal`);
     hideModal(`#${cellyStatsDetailsId}-modal`);
     hideModal(`#${piggySaveDetailsId}-modal`);
     hideModal(`#${project313DetailsId}-modal`);
