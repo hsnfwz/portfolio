@@ -8,12 +8,7 @@
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
     --color-emerald-500: oklch(0.696 0.17 162.48);
-    --color-sky-300: oklch(0.828 0.111 230.318);
-    --color-sky-400: oklch(0.746 0.16 232.661);
     --color-sky-500: oklch(0.685 0.169 237.323);
-    --color-sky-600: oklch(0.588 0.158 241.966);
-    --color-sky-700: oklch(0.5 0.134 242.749);
-    --color-sky-800: oklch(0.443 0.11 240.79);
     --color-pink-500: oklch(0.656 0.241 354.308);
     --color-rose-500: oklch(0.645 0.246 16.439);
     --color-neutral-200: oklch(0.922 0 0);
@@ -32,7 +27,6 @@
     --text-9xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-bold: 700;
-    --radius-lg: 0.5rem;
     --blur-lg: 16px;
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -244,8 +238,14 @@
   .-z-10 {
     z-index: calc(10 * -1);
   }
+  .z-40 {
+    z-index: 40;
+  }
   .z-50 {
     z-index: 50;
+  }
+  .m-auto {
+    margin: auto;
   }
   .mx-auto {
     margin-inline: auto;
@@ -258,6 +258,9 @@
   }
   .grid {
     display: grid;
+  }
+  .hidden {
+    display: none;
   }
   .h-4 {
     height: calc(var(--spacing) * 4);
@@ -336,14 +339,23 @@
   .gap-16 {
     gap: calc(var(--spacing) * 16);
   }
+  .self-end {
+    align-self: flex-end;
+  }
   .self-start {
     align-self: flex-start;
+  }
+  .overflow-auto {
+    overflow: auto;
   }
   .overflow-hidden {
     overflow: hidden;
   }
   .overflow-x-scroll {
     overflow-x: scroll;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
   }
   .overflow-y-hidden {
     overflow-y: hidden;
@@ -353,9 +365,6 @@
   }
   .rounded {
     border-radius: 0.25rem;
-  }
-  .rounded-lg {
-    border-radius: var(--radius-lg);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -383,6 +392,12 @@
   .border-neutral-200 {
     border-color: var(--color-neutral-200);
   }
+  .border-transparent {
+    border-color: transparent;
+  }
+  .bg-black\/75 {
+    background-color: color-mix(in oklab, var(--color-black) 75%, transparent);
+  }
   .bg-emerald-500 {
     background-color: var(--color-emerald-500);
   }
@@ -392,29 +407,17 @@
   .bg-rose-500 {
     background-color: var(--color-rose-500);
   }
-  .bg-sky-300 {
-    background-color: var(--color-sky-300);
-  }
-  .bg-sky-400 {
-    background-color: var(--color-sky-400);
-  }
   .bg-sky-500 {
     background-color: var(--color-sky-500);
-  }
-  .bg-sky-600 {
-    background-color: var(--color-sky-600);
-  }
-  .bg-sky-700 {
-    background-color: var(--color-sky-700);
-  }
-  .bg-sky-800 {
-    background-color: var(--color-sky-800);
   }
   .bg-white {
     background-color: var(--color-white);
   }
   .bg-white\/50 {
     background-color: color-mix(in oklab, var(--color-white) 50%, transparent);
+  }
+  .fill-black {
+    fill: var(--color-black);
   }
   .object-cover {
     object-fit: cover;
@@ -425,8 +428,14 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-\[56px\] {
+    padding-inline: 56px;
   }
   .px-\[70px\] {
     padding-inline: 70px;
@@ -436,6 +445,9 @@
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
+  }
+  .pb-\[56px\] {
+    padding-bottom: 56px;
   }
   .text-center {
     text-align: center;
@@ -510,6 +522,13 @@
       }
     }
   }
+  .group-hover\:fill-white {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        fill: var(--color-white);
+      }
+    }
+  }
   .hover\:bg-black {
     &:hover {
       @media (hover: hover) {
@@ -522,6 +541,29 @@
       @media (hover: hover) {
         color: var(--color-white);
       }
+    }
+  }
+  .focus\:border {
+    &:focus {
+      border-style: var(--tw-border-style);
+      border-width: 1px;
+    }
+  }
+  .focus\:border-sky-500 {
+    &:focus {
+      border-color: var(--color-sky-500);
+    }
+  }
+  .focus\:ring-0 {
+    &:focus {
+      --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentColor);
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .focus\:outline-none {
+    &:focus {
+      --tw-outline-style: none;
+      outline-style: none;
     }
   }
   .disabled\:pointer-events-none {
@@ -568,7 +610,7 @@ svg {
   height: 1rem;
 }
 ::-webkit-scrollbar-track {
-  background: white;
+  background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background: oklch(0.922 0 0);

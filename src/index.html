@@ -7,18 +7,18 @@
   <title>Hussein Fawaz</title>
   <link href="./output.css" rel="stylesheet">
 </head>
-<body class="font-montserrat font-normal flex flex-col gap-16">
+<body class="font-montserrat font-normal flex flex-col gap-16 overflow-auto">
 
-  <!-- TODO: add read more button for each item which opens up a modal and shows more info/pics -->
+  <!-- TODO: details - show more info/pics -->
   <!-- TODO: fade in animations as we scroll down into each section (intersection observer)-->
   <!-- TODO: provide a test account for users to try the app with and note users about cold starts-->
 
-  <nav class="fixed top-0 left-0 z-50">
+  <nav class="fixed top-0 left-0 z-40">
     <div class="relative top-0 left-0">
-      <a class="block fixed top-4 left-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#">home</a>
-      <a class="block fixed top-4 right-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#about">about</a>
-      <a class="block fixed bottom-4 left-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#experience">experience</a>
-      <a class="block fixed bottom-4 right-4 group z-50 bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#contact">contact</a>
+      <a class="block fixed top-4 left-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#">home</a>
+      <a class="block fixed top-4 right-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#about">about</a>
+      <a class="block fixed bottom-4 left-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#experience">experience</a>
+      <a class="block fixed bottom-4 right-4 group bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow app_vertical-text uppercase p-2 duration-300 transition-all" href="#contact">contact</a>
     </div>
   </nav>
 
@@ -41,7 +41,7 @@
   </section>
 
   <section id="about" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
-    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">About</h1>
+    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">About</h1>
     <div class="flex flex-col gap-16 max-w-screen-md mx-auto">
       <div class="flex flex-col gap-4 text-center">
         <h2 class="text-2xl uppercase"><span class="font-bold text-emerald-500">3 Years</span> Professional Experience</h2>
@@ -80,7 +80,7 @@
   </section>
 
   <section id="experience" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px]">
-    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">Experience</h1>
+    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">Experience</h1>
     <h2 class="text-2xl text-center uppercase">Professional</h2>
     <div class="flex flex-col gap-16">
       <a class="self-start block relative top-0 left-0 group w-[calc(100%-16px)] max-w-[calc(768px-16px)] mx-auto" href="https://www.onswitchboard.com/" target="_blank">
@@ -115,22 +115,65 @@
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
         <a class="w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/bc-transit" target="_blank">Code</a>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">BC Transit</h1>
-          <p>Stay up to date with the latest British Columbia transit updates on vehicles, routes, and more</p>
-          <!-- <button id="experience-1-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">React</span>
-            <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
-            <span class="rounded bg-pink-500 text-white p-2">Leaflet</span>
-            <span class="rounded bg-pink-500 text-white p-2">TransLink API</span>
-          </p>
-          <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+
+        <button id="bc-transit-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="bc-transit-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="bc-transit-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <h1 class="text-2xl">BC Transit</h1>
+              <p>Stay up to date with the latest British Columbia transit updates on vehicles, routes, and more</p>
+              <p class="flex flex-wrap gap-1">
+                <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">React</span>
+                <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
+                <span class="rounded bg-pink-500 text-white p-2">Leaflet</span>
+                <span class="rounded bg-pink-500 text-white p-2">TransLink API</span>
+              </p>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+
+            </div>
+          </div>
         </div>
       </div>
 
@@ -146,20 +189,31 @@
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
         <a class="w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/cellystats" target="_blank">Code</a>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">CellyStats</h1>
-          <p>Search, view, and compare National Hockey League (NHL) player statistics with visual breakdowns</p>
-          <!-- <button id="experience-1-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">React</span>
-            <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
-            <span class="rounded bg-pink-500 text-white p-2">Tremor</span>
-            <span class="rounded bg-pink-500 text-white p-2">NHL API</span>
-          </p>
+
+        <button id="cellystats-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="cellystats-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="cellystats-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl">CellyStats</h1>
+                <p>Search, view, and compare National Hockey League (NHL) player statistics with visual breakdowns</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                  <span class="rounded bg-sky-500 text-white p-2">React</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
+                  <span class="rounded bg-pink-500 text-white p-2">Tremor</span>
+                  <span class="rounded bg-pink-500 text-white p-2">NHL API</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -178,25 +232,36 @@
           <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/piggysave-client" target="_blank">Client Code</a>
           <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/piggysave-server" target="_blank">Server Code</a>
         </div>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">PiggySave</h1>
-          <p>Track and calculate your income and expenses and view trends with visual breakdowns</p>
-          <!-- <button id="experience-2-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">React</span>
-            <span class="rounded bg-emerald-500 text-white p-2">Node.js</span>
-            <span class="rounded bg-emerald-500 text-white p-2">Express.js</span>
-            <span class="rounded bg-emerald-500 text-white p-2">SQL</span>
-            <span class="rounded bg-emerald-500 text-white p-2">PostgreSQL</span>
-            <span class="rounded bg-emerald-500 text-white p-2">Neon</span>
-            <span class="rounded bg-pink-500 text-white p-2">Auth0</span>
-            <span class="rounded bg-pink-500 text-white p-2">Recharts</span>
-          </p>
+
+        <button id="piggysave-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="piggysave-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="piggysave-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl">PiggySave</h1>
+                <p>Track and calculate your income and expenses and view trends with visual breakdowns</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                  <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
+                  <span class="rounded bg-sky-500 text-white p-2">React</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Node.js</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Express.js</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">SQL</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">PostgreSQL</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Neon</span>
+                  <span class="rounded bg-pink-500 text-white p-2">Auth0</span>
+                  <span class="rounded bg-pink-500 text-white p-2">Recharts</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -212,19 +277,30 @@
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
         <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/project-313" target="_blank">Code</a>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">Project313</h1>
-          <p>Socialize and share images, videos, and discussions with online community members</p>
-          <!-- <button id="experience-2-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-            <span class="rounded bg-sky-500 text-white p-2">React</span>
-            <span class="rounded bg-emerald-500 text-white p-2">Supabase</span>
-          </p>
-          <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+
+        <button id="project313-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="project313-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="project313-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl">Project313</h1>
+                <p>Socialize and share images, videos, and discussions with online community members</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                  <span class="rounded bg-sky-500 text-white p-2">React</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Supabase</span>
+                </p>
+                <span class="self-start p-2 bg-rose-500 text-white rounded">Work in Progress</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -240,16 +316,27 @@
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
         <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/portfolio" target="_blank">Code</a>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">Hussein Fawaz Portfolio</h1>
-          <p>Official website of Hussein Fawaz showcasing his web development experience</p>
-          <!-- <button id="experience-3-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-          </p>
+
+        <button id="hussein-fawaz-portfolio-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="hussein-fawaz-portfolio-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="hussein-fawaz-portfolio-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl">Hussein Fawaz Portfolio</h1>
+                <p>Official website of Hussein Fawaz showcasing his web development experience</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -265,24 +352,34 @@
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
         <a class="w-full  block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/zeinab-fawaz-portfolio" target="_blank">Code</a>
-        <div class="flex flex-col gap-4">
-          <h1 class="text-2xl">Zeinab Fawaz Porfolio</h1>
-          <p>Official website of Zeinab Fawaz showcasing her social media and content creation experience</p>
-          <!-- <button id="experience-4-button" type="button" class="self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer">Read More</button> -->
-          <p class="flex flex-wrap gap-1">
-            <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-            <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-            <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-          </p>
+
+        <button id="zeinab-fawaz-portfolio-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="zeinab-fawaz-portfolio-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="zeinab-fawaz-portfolio-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-[56px] pb-[56px] w-full max-w-screen-md m-auto">
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl">Zeinab Fawaz Porfolio</h1>
+                <p>Official website of Zeinab Fawaz showcasing her social media and content creation experience</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <section id="contact" class="w-full flex flex-col gap-16 relative top-0 left-0 px-[70px] h-screen">
-    <h1 class="w-full text-center p-2 z-50 sticky top-0 bg-white border-b border-neutral-200 uppercase">Contact</h1>
+    <h1 class="w-full text-center p-2 z-40 sticky top-0 bg-white border-b border-neutral-200 uppercase">Contact</h1>
     <div class="mx-auto flex flex-col gap-8 py-4 px-2 w-full max-w-screen-md">
       <div class="flex flex-col gap-8 text-center">
         <h2 class="text-2xl uppercase">Let's Connect!</h2>
