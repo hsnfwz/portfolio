@@ -412,6 +412,9 @@
   .bg-emerald-500 {
     background-color: var(--color-emerald-500);
   }
+  .bg-neutral-200 {
+    background-color: var(--color-neutral-200);
+  }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
   }
