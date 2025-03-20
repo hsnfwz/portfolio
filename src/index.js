@@ -16,6 +16,10 @@ navModalLinkAbout.addEventListener('click', () => hideModal(`#nav-modal`));
 navModalLinkExperience.addEventListener('click', () => hideModal(`#nav-modal`));
 navModalLinkContact.addEventListener('click', () => hideModal(`#nav-modal`));
 
+const noureddineFeathersDetailsId = 'noureddine-feathers-details';
+const marksBarbershopDetailsId = 'marks-barbershop-details';
+const beByBenjamPappDetailsId = 'bebybenjampapp-details';
+
 const bcTransitDetailsId = 'bc-transit-details';
 const chartMakerDetailsId = 'chart-maker-details';
 const cellyStatsDetailsId = 'cellystats-details';
@@ -23,6 +27,10 @@ const piggySaveDetailsId = 'piggysave-details';
 const project313DetailsId = 'project313-details';
 const husseinFawazPortfolioDetailsId = 'hussein-fawaz-portfolio-details';
 const zeinabFawazPortfolioDetailsId = 'zeinab-fawaz-portfolio-details';
+
+const noureddineFeathersDetailsButton = document.querySelector(`#${noureddineFeathersDetailsId}-button`);
+const marksBarbershopDetailsButton = document.querySelector(`#${marksBarbershopDetailsId}-button`);
+const beByBenjamPappDetailsButton = document.querySelector(`#${beByBenjamPappDetailsId}-button`);
 
 const bcTransitDetailsButton = document.querySelector(`#${bcTransitDetailsId}-button`);
 const chartMakerDetailsButton = document.querySelector(`#${chartMakerDetailsId}-button`);
@@ -32,6 +40,10 @@ const project313DetailsButton = document.querySelector(`#${project313DetailsId}-
 const husseinFawazPortfolioDetailsButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-button`);
 const zeinabFawazPortfolioDetailsButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-button`);
 
+noureddineFeathersDetailsButton.addEventListener('click', () => showModal(`#${noureddineFeathersDetailsId}-modal`));
+marksBarbershopDetailsButton.addEventListener('click', () => showModal(`#${marksBarbershopDetailsId}-modal`));
+beByBenjamPappDetailsButton.addEventListener('click', () => showModal(`#${beByBenjamPappDetailsId}-modal`));
+
 bcTransitDetailsButton.addEventListener('click', () => showModal(`#${bcTransitDetailsId}-modal`));
 chartMakerDetailsButton.addEventListener('click', () => showModal(`#${chartMakerDetailsId}-modal`));
 cellyStatsDetailsButton.addEventListener('click', () => showModal(`#${cellyStatsDetailsId}-modal`));
@@ -40,6 +52,10 @@ project313DetailsButton.addEventListener('click', () => showModal(`#${project313
 husseinFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${husseinFawazPortfolioDetailsId}-modal`));
 zeinabFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${zeinabFawazPortfolioDetailsId}-modal`));
 
+const noureddineFeathersDetailsCloseButton = document.querySelector(`#${noureddineFeathersDetailsId}-close-button`);
+const marksBarbershopDetailsCloseButton = document.querySelector(`#${marksBarbershopDetailsId}-close-button`);
+const beByBenjamPappDetailsCloseButton = document.querySelector(`#${beByBenjamPappDetailsId}-close-button`);
+
 const bcTransitDetailsCloseButton = document.querySelector(`#${bcTransitDetailsId}-close-button`);
 const chartMakerDetailsCloseButton = document.querySelector(`#${chartMakerDetailsId}-close-button`);
 const cellyStatsDetailsCloseButton = document.querySelector(`#${cellyStatsDetailsId}-close-button`);
@@ -47,6 +63,10 @@ const piggySaveDetailsCloseButton = document.querySelector(`#${piggySaveDetailsI
 const project313DetailsCloseButton = document.querySelector(`#${project313DetailsId}-close-button`);
 const husseinFawazPortfolioDetailsCloseButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-close-button`);
 const zeinabFawazPortfolioDetailsCloseButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-close-button`);
+
+noureddineFeathersDetailsCloseButton.addEventListener('click', () => hideModal(`#${noureddineFeathersDetailsId}-modal`));
+marksBarbershopDetailsCloseButton.addEventListener('click', () => hideModal(`#${marksBarbershopDetailsId}-modal`));
+beByBenjamPappDetailsCloseButton.addEventListener('click', () => hideModal(`#${beByBenjamPappDetailsId}-modal`));
 
 bcTransitDetailsCloseButton.addEventListener('click', () => hideModal(`#${bcTransitDetailsId}-modal`));
 chartMakerDetailsCloseButton.addEventListener('click', () => hideModal(`#${chartMakerDetailsId}-modal`));
@@ -88,6 +108,9 @@ function hideModal(selector) {
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') {
     hideModal(`#nav-modal`);
+    hideModal(`#${noureddineFeathersDetailsId}-modal`);
+    hideModal(`#${marksBarbershopDetailsId}-modal`);
+    hideModal(`#${beByBenjamPappDetailsId}-modal`);
     hideModal(`#${bcTransitDetailsId}-modal`);
     hideModal(`#${chartMakerDetailsId}-modal`);
     hideModal(`#${cellyStatsDetailsId}-modal`);
