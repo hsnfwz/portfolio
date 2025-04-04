@@ -226,81 +226,40 @@
     <h2 class="text-2xl uppercase max-w-screen-md mx-auto w-full font-bold">Projects</h2>
     <div class="grid grid-flow-col gap-8 py-4 w-full overflow-x-scroll overflow-y-hidden overscroll-x-contain snap-mandatory snap-x scroll-px-4">
       <div class="flex flex-col gap-8">
-        <a class="border border-transparent mx-2 focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://bc-transit-one.vercel.app/" target="_blank">
+        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://sakina-one.vercel.app/" target="_blank">
           <picture>
-            <source media="(min-width:768px)" srcset="./images/bc-transit.png">
-            <img src="./images/bc-transit-mobile.png" alt="bc-transit" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+            <source media="(min-width:768px)" srcset="./images/sakina.png">
+            <img src="./images/sakina-mobile.png" alt="sakina" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
           </picture>
           <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
           <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
           <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
-        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/bc-transit" target="_blank">Code</a>
+        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/sakina" target="_blank">Code</a>
 
-        <button id="bc-transit-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+        <button id="sakina-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
 
-        <div id="bc-transit-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+        <div id="sakina-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
           <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
-            <button id="bc-transit-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+            <button id="sakina-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
             </button>
             <div class="flex flex-col gap-4 bg-white px-4 pb-4 md:px-[56px] md:pb-[56px] w-full">
-              <h1 class="text-2xl font-bold">BC Transit</h1>
-              <p>Stay up to date with the latest British Columbia transit updates on vehicles, routes, and more</p>
-              <p class="flex flex-wrap gap-1">
-                <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-                <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-                <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-                <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-                <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
-                <span class="rounded bg-sky-500 text-white p-2">React</span>
-                <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
-                <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
-                <span class="rounded bg-pink-500 text-white p-2">Leaflet</span>
-                <span class="rounded bg-pink-500 text-white p-2">TransLink API</span>
-              </p>
-              <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex flex-col gap-8">
-        <a class="border border-transparent mx-2 focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://chart-maker-five.vercel.app/" target="_blank">
-          <picture>
-            <source media="(min-width:768px)" srcset="./images/chart-maker.png">
-            <img src="./images/chart-maker-mobile.png" alt="chart-maker" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
-          </picture>
-          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
-          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
-          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
-          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
-        </a>
-        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/chart-maker" target="_blank">Code</a>
-
-        <button id="chart-maker-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
-
-        <div id="chart-maker-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
-          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
-            <button id="chart-maker-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
-            </button>
-            <div class="flex flex-col gap-4 bg-white px-4 pb-4 md:px-[56px] md:pb-[56px] w-full">
-              <h1 class="text-2xl font-bold">Chart Maker</h1>
-              <p>Create bar, line, and area charts on the go and save them as PNG or JPEG</p>
-              <p class="flex flex-wrap gap-1">
-                <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-                <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-                <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-                <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-                <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
-                <span class="rounded bg-sky-500 text-white p-2">React</span>
-                <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
-                <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
-                <span class="rounded bg-pink-500 text-white p-2">Recharts</span>
-              </p>
-              <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
+              <div class="flex flex-col gap-4">
+                <h1 class="text-2xl font-bold">Sakina</h1>
+                <p>Socialize and share images, videos, and discussions with online community members</p>
+                <p class="flex flex-wrap gap-1">
+                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                  <span class="rounded bg-sky-500 text-white p-2">React</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Supabase</span>
+                  <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
+                </p>
+                <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
+              </div>
             </div>
           </div>
         </div>
@@ -342,6 +301,47 @@
                   <span class="rounded bg-pink-500 text-white p-2">NHL API</span>
                 </p>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex flex-col gap-8">
+        <a class="border border-transparent mx-2 focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://bc-transit-one.vercel.app/" target="_blank">
+          <picture>
+            <source media="(min-width:768px)" srcset="./images/bc-transit.png">
+            <img src="./images/bc-transit-mobile.png" alt="bc-transit" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+          </picture>
+          <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
+          <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
+        </a>
+        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/bc-transit" target="_blank">Code</a>
+
+        <button id="bc-transit-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+
+        <div id="bc-transit-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+          <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
+            <button id="bc-transit-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
+            </button>
+            <div class="flex flex-col gap-4 bg-white px-4 pb-4 md:px-[56px] md:pb-[56px] w-full">
+              <h1 class="text-2xl font-bold">BC Transit</h1>
+              <p>Stay up to date with the latest British Columbia transit updates on vehicles, routes, and more</p>
+              <p class="flex flex-wrap gap-1">
+                <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">React</span>
+                <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
+                <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
+                <span class="rounded bg-pink-500 text-white p-2">Leaflet</span>
+                <span class="rounded bg-pink-500 text-white p-2">TransLink API</span>
+              </p>
+              <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
             </div>
           </div>
         </div>
@@ -397,44 +397,46 @@
       </div>
 
       <div class="flex flex-col gap-8">
-        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://project-313.vercel.app/" target="_blank">
+        <a class="border border-transparent mx-2 focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://chart-maker-five.vercel.app/" target="_blank">
           <picture>
-            <source media="(min-width:768px)" srcset="./images/project313.png">
-            <img src="./images/project313-mobile.png" alt="project313" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
+            <source media="(min-width:768px)" srcset="./images/chart-maker.png">
+            <img src="./images/chart-maker-mobile.png" alt="chart-maker" style="width:auto;" class="w-full bg-white/50 backdrop-blur-lg shadow object-cover object-center" />
           </picture>
           <div class="border-t border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -left-2 -z-10 transition-all duration-300"></div>
           <div class="border-t border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -top-2 -right-2 -z-10 transition-all duration-300"></div>
           <div class="border-b border-l border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -left-2 -z-10 transition-all duration-300"></div>
           <div class="border-b border-r border-black w-4 h-4 group-hover:w-full group-hover:h-full absolute -bottom-2 -right-2 -z-10 transition-all duration-300"></div>
         </a>
-        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/project-313" target="_blank">Code</a>
+        <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 w-full block bg-white/50 hover:bg-black hover:text-white backdrop-blur-lg shadow text-center uppercase p-2 duration-300 transition-all" href="https://github.com/hsnfwz/chart-maker" target="_blank">Code</a>
 
-        <button id="project313-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
+        <button id="chart-maker-details-button" type="button" class="uppercase self-start transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black hover:text-white border border-black p-2 bg-white cursor-pointer focus:border focus:border-sky-500 focus:outline-none focus:ring-0">Details</button>
 
-        <div id="project313-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
+        <div id="chart-maker-details-modal" class="hidden fixed top-0 left-0 w-full h-screen bg-black/75 backdrop-blur-lg z-50 p-4 overflow-y-auto">
           <div class="flex flex-col gap-4 bg-white p-4 w-full max-w-screen-md m-auto">
-            <button id="project313-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
+            <button id="chart-maker-details-close-button" type="button" class="sticky top-0 uppercase self-end transition-all duration-300 disabled:pointer-events-none disabled:opacity-50 hover:bg-black p-2 bg-white cursor-pointer border border-black focus:border focus:border-sky-500 focus:outline-none focus:ring-0 group">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-black group-hover:fill-white transition-all duration-300"><path d="M10.5859 12L2.79297 4.20706L4.20718 2.79285L12.0001 10.5857L19.793 2.79285L21.2072 4.20706L13.4143 12L21.2072 19.7928L19.793 21.2071L12.0001 13.4142L4.20718 21.2071L2.79297 19.7928L10.5859 12Z"></path></svg>
             </button>
             <div class="flex flex-col gap-4 bg-white px-4 pb-4 md:px-[56px] md:pb-[56px] w-full">
-              <div class="flex flex-col gap-4">
-                <h1 class="text-2xl font-bold">Project313</h1>
-                <p>Socialize and share images, videos, and discussions with online community members</p>
-                <p class="flex flex-wrap gap-1">
-                  <span class="rounded bg-sky-500 text-white p-2">HTML</span>
-                  <span class="rounded bg-sky-500 text-white p-2">CSS</span>
-                  <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
-                  <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
-                  <span class="rounded bg-sky-500 text-white p-2">React</span>
-                  <span class="rounded bg-emerald-500 text-white p-2">Supabase</span>
-                  <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
-                </p>
-                <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
-              </div>
+              <h1 class="text-2xl font-bold">Chart Maker</h1>
+              <p>Create bar, line, and area charts on the go and save them as PNG or JPEG</p>
+              <p class="flex flex-wrap gap-1">
+                <span class="rounded bg-sky-500 text-white p-2">HTML</span>
+                <span class="rounded bg-sky-500 text-white p-2">CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">Tailwind CSS</span>
+                <span class="rounded bg-sky-500 text-white p-2">JavaScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">TypeScript</span>
+                <span class="rounded bg-sky-500 text-white p-2">React</span>
+                <span class="rounded bg-sky-500 text-white p-2">Next.js</span>
+                <span class="rounded bg-emerald-500 text-white p-2">Vercel</span>
+                <span class="rounded bg-pink-500 text-white p-2">Recharts</span>
+              </p>
+              <span class="self-start p-2 bg-neutral-200 rounded">Work in Progress</span>
             </div>
           </div>
         </div>
       </div>
+
+      
 
       <div class="flex flex-col gap-8">
         <a class="border border-transparent focus:border focus:border-sky-500 focus:outline-none focus:ring-0 block relative top-0 left-0 group w-[200px] md:w-[800px] snap-start" href="https://www.husseinfawaz.ca/" target="_blank">

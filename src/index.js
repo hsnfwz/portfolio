@@ -24,7 +24,7 @@ const bcTransitDetailsId = 'bc-transit-details';
 const chartMakerDetailsId = 'chart-maker-details';
 const cellyStatsDetailsId = 'cellystats-details';
 const piggySaveDetailsId = 'piggysave-details';
-const project313DetailsId = 'project313-details';
+const sakinaDetailsId = 'sakina-details';
 const husseinFawazPortfolioDetailsId = 'hussein-fawaz-portfolio-details';
 const zeinabFawazPortfolioDetailsId = 'zeinab-fawaz-portfolio-details';
 
@@ -36,7 +36,7 @@ const bcTransitDetailsButton = document.querySelector(`#${bcTransitDetailsId}-bu
 const chartMakerDetailsButton = document.querySelector(`#${chartMakerDetailsId}-button`);
 const cellyStatsDetailsButton = document.querySelector(`#${cellyStatsDetailsId}-button`);
 const piggySaveDetailsButton = document.querySelector(`#${piggySaveDetailsId}-button`);
-const project313DetailsButton = document.querySelector(`#${project313DetailsId}-button`);
+const sakinaDetailsButton = document.querySelector(`#${sakinaDetailsId}-button`);
 const husseinFawazPortfolioDetailsButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-button`);
 const zeinabFawazPortfolioDetailsButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-button`);
 
@@ -48,7 +48,7 @@ bcTransitDetailsButton.addEventListener('click', () => showModal(`#${bcTransitDe
 chartMakerDetailsButton.addEventListener('click', () => showModal(`#${chartMakerDetailsId}-modal`));
 cellyStatsDetailsButton.addEventListener('click', () => showModal(`#${cellyStatsDetailsId}-modal`));
 piggySaveDetailsButton.addEventListener('click', () => showModal(`#${piggySaveDetailsId}-modal`));
-project313DetailsButton.addEventListener('click', () => showModal(`#${project313DetailsId}-modal`));
+sakinaDetailsButton.addEventListener('click', () => showModal(`#${sakinaDetailsId}-modal`));
 husseinFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${husseinFawazPortfolioDetailsId}-modal`));
 zeinabFawazPortfolioDetailsButton.addEventListener('click', () => showModal(`#${zeinabFawazPortfolioDetailsId}-modal`));
 
@@ -60,7 +60,7 @@ const bcTransitDetailsCloseButton = document.querySelector(`#${bcTransitDetailsI
 const chartMakerDetailsCloseButton = document.querySelector(`#${chartMakerDetailsId}-close-button`);
 const cellyStatsDetailsCloseButton = document.querySelector(`#${cellyStatsDetailsId}-close-button`);
 const piggySaveDetailsCloseButton = document.querySelector(`#${piggySaveDetailsId}-close-button`);
-const project313DetailsCloseButton = document.querySelector(`#${project313DetailsId}-close-button`);
+const sakinaDetailsCloseButton = document.querySelector(`#${sakinaDetailsId}-close-button`);
 const husseinFawazPortfolioDetailsCloseButton = document.querySelector(`#${husseinFawazPortfolioDetailsId}-close-button`);
 const zeinabFawazPortfolioDetailsCloseButton = document.querySelector(`#${zeinabFawazPortfolioDetailsId}-close-button`);
 
@@ -72,7 +72,7 @@ bcTransitDetailsCloseButton.addEventListener('click', () => hideModal(`#${bcTran
 chartMakerDetailsCloseButton.addEventListener('click', () => hideModal(`#${chartMakerDetailsId}-modal`));
 cellyStatsDetailsCloseButton.addEventListener('click', () => hideModal(`#${cellyStatsDetailsId}-modal`));
 piggySaveDetailsCloseButton.addEventListener('click', () => hideModal(`#${piggySaveDetailsId}-modal`));
-project313DetailsCloseButton.addEventListener('click', () => hideModal(`#${project313DetailsId}-modal`));
+sakinaDetailsCloseButton.addEventListener('click', () => hideModal(`#${sakinaDetailsId}-modal`));
 husseinFawazPortfolioDetailsCloseButton.addEventListener('click', () => hideModal(`#${husseinFawazPortfolioDetailsId}-modal`));
 zeinabFawazPortfolioDetailsCloseButton.addEventListener('click', () => hideModal(`#${zeinabFawazPortfolioDetailsId}-modal`));
 
@@ -115,7 +115,7 @@ document.addEventListener('keydown', (event) => {
     hideModal(`#${chartMakerDetailsId}-modal`);
     hideModal(`#${cellyStatsDetailsId}-modal`);
     hideModal(`#${piggySaveDetailsId}-modal`);
-    hideModal(`#${project313DetailsId}-modal`);
+    hideModal(`#${sakinaDetailsId}-modal`);
     hideModal(`#${husseinFawazPortfolioDetailsId}-modal`);
     hideModal(`#${zeinabFawazPortfolioDetailsId}-modal`);
     enableBodyScrolling();
